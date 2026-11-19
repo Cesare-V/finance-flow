@@ -14,6 +14,7 @@ const ICONE_CATEGORIE: Record<string, string> = {
     Svago: "🎮",
     Trasporti: "🚗",
     Salute: "💊",
+    Animali: "🐶",
     Altro: "📦"
 };
 

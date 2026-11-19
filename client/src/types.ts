@@ -12,6 +12,7 @@ export type CategoriaTransazione =
     | "Svago"
     | "Trasporti"
     | "Salute"
+    | "Animali"
     | "Altro";
 
 export interface Transazione {

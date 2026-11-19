@@ -13,6 +13,7 @@ const CATEGORIE: CategoriaTransazione[] = [
     "Svago",
     "Trasporti",
     "Salute",
+    "Animali",
     "Altro"
 ];
 
