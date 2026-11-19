@@ -1,0 +1,30 @@
+datasource db {
+  provider = "sqlite"
+  url      = "file:./dev.db"
+}
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+model Utente {
+  id          Int           @id @default(autoincrement())
+  email       String        @unique
+  password    String
+  creatoIl    DateTime      @default(now())
+  transazioni Transazione[]
+}
+
+model Transazione {
+  id        Int      @id @default(autoincrement())
+  titolo    String
+  importo   Float
+  tipo      String   // "ENTRATA" | "USCITA"
+  categoria String   // "Cibo", "Casa", "Lavoro", "Svago", "Trasporti", "Salute", "Altro"
+  data      DateTime @default(now())
+  creatoIl  DateTime @default(now())
+
+  // Relazione 1-a-Molti con Utente (Foreign Key)
+  utenteId  Int
+  utente    Utente   @relation(fields: [utenteId], references: [id], onDelete: Cascade)
+}

@@ -1,0 +1,20 @@
+# Dipendenze
+node_modules/
+client/node_modules/
+server/node_modules/
+
+# File di compilazione
+dist/
+client/dist/
+
+# Database e segreti
+*.db
+*.db-journal
+server/*.db
+server/*.db-journal
+.env
+server/.env
+
+# Log e file di sistema
+*.log
+.DS_Store
