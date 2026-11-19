@@ -33,7 +33,11 @@ export function RiepilogoCards({ transazioni }: RiepilogoProps) {
                     <span className="card-icon">🏦</span>
                 </div>
                 <div className="card-value">{formattaEuro(saldo)}</div>
-                <p className="card-subtext">Differenza entrate e uscite</p>
+                <p className={`card-subtext ${saldo < 0 ? "text-red" : ""}`}>
+                    {saldo < 0 
+                    ? "⚠️ Attenzione: sei in passivo questo mese!" 
+                    : "Differenza entrate e uscite"}
+                </p>
             </div>
 
             {/* CARD 2: ENTRATE TOTALI */}

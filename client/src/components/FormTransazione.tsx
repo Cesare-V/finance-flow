@@ -166,7 +166,7 @@ export function FormTransazione({ token, onTransazioneCreata }: FormProps) {
                 </div>
 
                 <button type="submit" className="btn-primary" disabled={caricamento}>
-                    {caricamento ? "Salvataggio..." : "Registra Operazione"}
+                    {caricamento ? "Salvataggio..." : tipo === "ENTRATA" ? "Registra Entrata 📈" : tipo === "USCITA" ? "Registra Spesa 📉" : "Registra Operazione"}
                 </button>
             </form>
         </div>
